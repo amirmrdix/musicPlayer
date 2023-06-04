@@ -1,0 +1,152 @@
+@font-face {
+    font-family: font;
+    src: url(Aria-UltraBold.otf);
+}
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+}
+:root{
+    --Black : #454545;
+    --Orange1 : #FF6000;
+    --Orange2 : #FFA559;
+    --White : #FFE6C7;
+}
+body{
+    background-color: var(--Black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.musicPlayer{
+    background-color: var(--White);
+    width: 19rem; height: 35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 1.5rem;
+    box-shadow: 0px 0px 15px var(--Orange1);
+
+}
+
+/* header */
+.songCover{
+    width: 80%; 
+    padding: 0.3rem;
+}
+.songCover img{
+    width: 100%;
+    border-radius: 1rem;
+}
+
+
+
+/* main */
+.songInfo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: .8rem;
+}
+.songName{
+    color: var(--Orange1);
+    font-size: 1.4rem;
+    font-family: font;
+}
+.songSinger{
+    color: var(--Orange2);
+    font-size: 1.05rem;
+    font-family: font;
+}
+.progressContainer{
+    width: 80%; height: 0.4rem;
+    border-radius: 1rem;
+    background-color: var(--Black);
+    cursor: pointer;
+}
+.songProgress{
+    background-color: var(--Orange1);
+    height: 0.5rem;
+    border-radius: 1rem;
+    position: relative;
+    top: -0.8px;
+    width: 0;
+}
+audio{display: none;}
+#file{display: none;}
+
+
+
+
+/* footer */
+.songController{width: 100%;}
+.ButtonsContainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.controlButton{
+    width: 3rem; height: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--Black);
+    transition: .3s;
+    font-size: 1.2rem;
+}
+label.listSong{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.playSong{
+    width: 6.5rem; height: 6.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.playsong-colored{
+    width: 6.5rem; height: 6.5rem;
+    background: linear-gradient(to left,var(--Orange2),var(--Orange1));
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: playing .5s linear infinite paused;
+}
+.playSong-wrapper{
+    width: 85%; height: 85%;
+    background: var(--Black);
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.playSong:hover .playSong-wrapper{background-color: transparent;}
+
+.playSongIcon{
+    position: absolute;
+    z-index: 2;
+    color: var(--White);
+}
+.prevSong:hover , .favSong:hover{
+    background-color: var(--Orange2);
+    color: var(--White);
+}
+.afterFavSong{
+    color: rgb(255, 52, 52);
+}
+.afterFavSong:hover{
+    background-color: var(--Orange2);
+    color: rgb(255, 52, 52);
+}
+.nextSong:hover , .listSong:hover{
+    background-color: var(--Orange2);
+    color: var(--White);
+
+}
+@keyframes playing {
+    to{transform: rotate(1turn);}
+}

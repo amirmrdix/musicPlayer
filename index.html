@@ -1,0 +1,74 @@
+<html>
+
+    <head>
+        <title>Music Player</title>
+        <link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="app.js" defer></script>
+        <script src="https://kit.fontawesome.com/39e73a9f18.js" crossorigin="anonymous"></script>
+    </head>
+
+
+    <body>
+
+        <div class="musicPlayer">
+
+
+            <header class="songCover">
+                <img src="SongCover.jpg" alt="song cover">
+            </header>
+
+
+
+
+
+            <main class="songInfo">
+                <h3 class="songName">Song Name</h3>
+                <p class="songSinger">Song Singer</p>
+
+                <div class="progressContainer">
+                    <div class="songProgress"></div>
+                </div>
+
+                <audio src="" controls></audio>
+            </main>
+
+
+
+
+            <footer class="songController">
+                
+
+                <div class="ButtonsContainer">
+                    <button class="fas fa-step-backward prevSong controlButton"></button>
+
+
+                    <button class="playSong controlButton" disabled>
+
+                        <i class="fas fa-play playSongIcon"></i>
+
+                        <div class="playsong-colored">
+                            <div class="playSong-wrapper"></div>
+                        </div>
+
+                    </button>
+
+
+                    <button class="fas fa-step-forward nextSong controlButton"></button>
+                </div>
+
+
+
+                <div class="ButtonsContainer">
+                    <button class="fas fa-heart favSong controlButton"></button>
+                    <input type="file" id="file" multiple>
+                    <label for="file" class="fad fa-list-music listSong controlButton"></label>
+                </div>
+
+            </footer>
+
+
+        </div>
+
+    </body>
+</html>
